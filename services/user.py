@@ -10,8 +10,8 @@ def create_user(
         password: str,
         email: str = None,
         first_name: str = None,
-        last_name: str = None,
-) -> QuerySet:
+        last_name: str = None
+) -> User:
     user = get_user_model().objects.create_user(
         username=username, password=password
     )
